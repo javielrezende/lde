@@ -2,8 +2,12 @@ var btAdicionar = document.getElementById("btAdicionar");
 var btAdicionarFim = document.getElementById("btAdicionarFim");
 var inNome = document.getElementById("inNome");
 var outLista = document.getElementById("outLista");
+var outLista1 = document.getElementById("outLista1");
+var outLista2 = document.getElementById("outLista2");
 var btExcluir = document.getElementById("btExcluir");
 var btExcluirU = document.getElementById("btExcluirU");
+var btME = document.getElementById("btME");
+var btMD = document.getElementById("btMD");
 var btPesquisar = document.getElementById("btPesquisar");
 
 // instancia um objeto da classe ListaLigada() que contem a estrutura de dados de listas 
@@ -105,4 +109,24 @@ function pesquisarAluno() {
     inNome.value = "";
 
 }
-btPesquisar.addEventListener("click", pesquisarAluno); 
+btPesquisar.addEventListener("click", pesquisarAluno);
+
+//--------------------------------------------------------------------
+
+// Método para mostrar da esquerda para a direita
+function mostraesquerda() {
+    
+    // printa na tela da esquerda para a direita
+    outLista1.textContent = lista.esquerda();
+}
+btME.addEventListener("click", mostraesquerda);
+
+//--------------------------------------------------------------------
+
+// Método para mostrar da direita para a esquerda
+function mostradireita() {
+    
+    // printa na tela da esquerda para a direita
+    outLista2.textContent = lista.direita();
+}
+btMD.addEventListener("click", mostradireita);

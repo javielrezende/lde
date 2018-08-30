@@ -96,6 +96,38 @@ class ListaDuplamenteLigada {
         return lista;
     }
 
+// -----------------------------------------------------------------------------------------
+
+    // Mostra uma lista da esquerda para a direita
+    esquerda() {
+        var lista = "";
+
+        var atual = this.cab;
+
+        // enquanto for diferente de null
+        while (atual) {
+            lista = lista + " - " + atual.nome + " - ";
+            atual = atual.prox;
+        }
+        return lista;
+    }
+
+// -----------------------------------------------------------------------------------------
+
+    // Mostra uma lista da direita para esquerda
+    direita() {
+        var lista = "";
+
+        var atual = this.ultimo;
+
+        // enquanto for diferente de null
+        while (atual) {
+            lista = lista + " - " + atual.nome + " - ";
+            atual = atual.ant;
+        }
+        return lista;
+    }
+
     // -----------------------------------------------------------------------------------------
 
     search(pesq) {
